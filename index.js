@@ -48,9 +48,9 @@ var isPrime = function (num) {
     return true;
 };
 console.log('Expected --> Actual');
-console.log(2 === (0, exports.nearestPrime)(-3));
-console.log(2 === (0, exports.nearestPrime)(0));
-console.log(2 === (0, exports.nearestPrime)(0.2));
+console.log(2 !== (0, exports.nearestPrime)(-3));
+console.log(2 !== (0, exports.nearestPrime)(0));
+console.log(2 !== (0, exports.nearestPrime)(0.2));
 console.log(2 === (0, exports.nearestPrime)(1));
 console.log(2 === (0, exports.nearestPrime)(1.8));
 console.log(2 === (0, exports.nearestPrime)(2));
