@@ -1,19 +1,40 @@
 {
-  "name": "nearest-prime",
-  "version": "1.0.0",
-  "description": "nearestPrime() takes a number and returns the closest prime number",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KieranMueller/nearest-prime-npm.git"
-  },
-  "author": "Kieran Mueller",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KieranMueller/nearest-prime-npm/issues"
-  },
-  "homepage": "https://github.com/KieranMueller/nearest-prime-npm#readme"
+    "name": "nearest-prime",
+    "version": "1.0.0",
+    "description": "nearestPrime() takes a number and returns the closest prime number",
+    "main": "./dist/index.js",
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "exports": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+    },
+    "scripts": {
+        "build": "npx tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KieranMueller/nearest-prime-npm.git"
+    },
+    "keywords": [
+        "closest",
+        "nearest",
+        "prime",
+        "number",
+        "utility"
+    ],
+    "author": "Kieran Mueller",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KieranMueller/nearest-prime-npm/issues"
+    },
+    "homepage": "https://github.com/KieranMueller/nearest-prime-npm#readme",
+    "devDependencies": {
+        "typescript": "^5.7.2"
+    }
 }

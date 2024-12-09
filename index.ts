@@ -1,4 +1,4 @@
-// function that takes a number and returns the closest prime number to it
+// function that takes a number and returns the closest prime number to it.
 
 const MAX_SAFE_INTEGER = 9007199254740991
 
@@ -41,34 +41,3 @@ const isPrime = (num: number): boolean => {
     }
     return true
 }
-
-console.log('Expected --> Actual')
-console.log(2 !== nearestPrime(-3))
-console.log(2 !== nearestPrime(0))
-console.log(2 !== nearestPrime(0.2))
-console.log(2 === nearestPrime(1))
-console.log(2 === nearestPrime(1.8))
-console.log(2 === nearestPrime(2))
-console.log(2 === nearestPrime(2.4))
-console.log(3 === nearestPrime(2.5))
-console.log(3 === nearestPrime(3))
-console.log(3 === nearestPrime(3.8))
-console.log(5 === nearestPrime(4))
-console.log(17 === nearestPrime(17.9))
-console.log(19 === nearestPrime(18))
-console.log(19 === nearestPrime(18.1))
-console.log(909331 === nearestPrime(909332))
-console.log(undefined === nearestPrime(-20))
-console.log(undefined === nearestPrime(0))
-console.log(undefined === nearestPrime(0.2))
-console.log(undefined === nearestPrime(0.9))
-console.log(2 === nearestPrime(1))
-console.log(2 === nearestPrime(1.1))
-console.log(2 === nearestPrime(1.6))
-console.log(2 === nearestPrime(2))
-console.log(2 === nearestPrime(-20, true))
-console.log(2 === nearestPrime(0, true))
-console.log(2 === nearestPrime(0.2, true))
-console.log(2 === nearestPrime(0.9, true))
-console.log(2 === nearestPrime(1, true))
-console.log(2 === nearestPrime(1.5, true))
