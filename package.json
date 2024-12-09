@@ -1,10 +1,10 @@
 {
     "name": "nearest-prime",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "nearestPrime() takes a number and returns the closest prime number",
-    "main": "./dist/index.js",
+    "main": "dist/index.js",
     "type": "module",
-    "types": "./dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "files": [
         "dist",
         "README.md"
