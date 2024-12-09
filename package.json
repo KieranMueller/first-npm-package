@@ -1,6 +1,6 @@
 {
     "name": "nearest-prime",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "nearestPrime() takes a number and returns the closest prime number",
     "main": "./dist/index.js",
     "type": "module",

@@ -1,12 +1,15 @@
 {
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
         "lib": ["ESNext"],
         "module": "ESNext",
         "target": "ESNext",
         "moduleDetection": "force",
-        "outDir": "dist",
+        "outDir": "./dist",
         "skipLibCheck": true,
-        "strict": true
+        "strict": true,
+        "moduleResolution": "node"
     }
 }
