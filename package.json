@@ -1,19 +1,19 @@
 {
-  "name": "@kieran/my-first-package",
-  "version": "1.0.0",
-  "description": "Simple demo npm package",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KieranMueller/first-npm-package.git"
-  },
-  "author": "Kieran Mueller",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KieranMueller/first-npm-package/issues"
-  },
-  "homepage": "https://github.com/KieranMueller/first-npm-package#readme"
+    "name": "@kieran/nearest-prime",
+    "version": "1.0.0",
+    "description": "Simple demo npm package",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KieranMueller/first-npm-package.git"
+    },
+    "author": "Kieran Mueller",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KieranMueller/first-npm-package/issues"
+    },
+    "homepage": "https://github.com/KieranMueller/first-npm-package#readme"
 }

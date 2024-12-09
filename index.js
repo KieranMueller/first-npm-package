@@ -1,53 +1,79 @@
 "use strict";
-// function that takes a number and returns the closest prime number to it (rounding down if necessary)
+// function that takes a number and returns the closest prime number to it
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.nearestPrime = void 0;
-// primes = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31...
-// edge cases = negative numbers, 0, 1, 2, 2.4, 2.6, 5.9, 6.1
-// get the lower and higher prime nums from num, then see which is closest and return, if tied, return smaller num
-var nearestPrime = function (number) {
-    if (isNaN(Number(number)))
+var MAX_SAFE_INTEGER = 9007199254740991;
+var nearestPrime = function (input, allowInvalidInput) {
+    if (allowInvalidInput === void 0) { allowInvalidInput = false; }
+    if (isNaN(Number(input)))
         return undefined;
-    var number1 = Math.round(Number(number));
-    if (number1 <= 2)
+    if (!allowInvalidInput)
+        if (Number(input) < 1)
+            return undefined;
+    var num = Math.round(Number(input));
+    if (num <= 2)
         return 2;
-    if (number1 === 3)
+    if (num === 3)
         return 3;
     var smallerPrime = 0;
     var largerPrime = 0;
-    // find smaller prime
-    for (var i = number1; i >= 3; i--) {
-        for (var j = 2; j <= number1 / 2; j++) {
-            if (i % j === 0) {
-                console.log('Not Prime: j: ', j, ' - i: ', i);
-                break;
-            }
-            if (j + 1 > number1 / 2) {
-                console.log('last loop, found no dividend: j=', j, '- i=', i);
-                smallerPrime = i;
-            }
-        }
-        if (smallerPrime)
+    for (var i = num; i >= 3; i--) {
+        if (isPrime(i)) {
+            smallerPrime = i;
             break;
-    }
-    // find larger prime
-    //TODO Remember to change 300 to integer max or something
-    for (var i = number1; i < 300; i++) {
-        for (var j = 2; j <= number1 / 2; j++) {
-            if (i % j === 0) {
-                console.log('Not Prime: j: ', j, ' - i: ', i);
-                break;
-            }
-            if (j + 1 > number1 / 2) {
-                console.log('last loop, found no dividend: j=', j, '- i=', i);
-                largerPrime = i;
-            }
         }
-        if (largerPrime)
-            break;
     }
-    console.log('Smaller Prime: ', smallerPrime, '- Larger Prime: ', largerPrime, '\n');
-    return -1;
+    for (var i = num; i < MAX_SAFE_INTEGER; i++) {
+        if (isPrime(i)) {
+            largerPrime = i;
+            break;
+        }
+    }
+    // if diff between input number and nearest smaller prime num is smaller than diff to larger prime num
+    // return smaller prime num, else return larger prime num
+    return (Number(input) - smallerPrime < largerPrime - Number(input)) ? smallerPrime : largerPrime;
 };
 exports.nearestPrime = nearestPrime;
-console.log((0, exports.nearestPrime)(3));
+var isPrime = function (num) {
+    if (num <= 1)
+        return false;
+    if (num <= 3)
+        return true;
+    if (num % 2 === 0 || num % 3 === 0)
+        return false;
+    for (var i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0)
+            return false;
+    }
+    return true;
+};
+console.log('Expected --> Actual');
+console.log(2 === (0, exports.nearestPrime)(-3));
+console.log(2 === (0, exports.nearestPrime)(0));
+console.log(2 === (0, exports.nearestPrime)(0.2));
+console.log(2 === (0, exports.nearestPrime)(1));
+console.log(2 === (0, exports.nearestPrime)(1.8));
+console.log(2 === (0, exports.nearestPrime)(2));
+console.log(2 === (0, exports.nearestPrime)(2.4));
+console.log(3 === (0, exports.nearestPrime)(2.5));
+console.log(3 === (0, exports.nearestPrime)(3));
+console.log(3 === (0, exports.nearestPrime)(3.8));
+console.log(5 === (0, exports.nearestPrime)(4));
+console.log(17 === (0, exports.nearestPrime)(17.9));
+console.log(19 === (0, exports.nearestPrime)(18));
+console.log(19 === (0, exports.nearestPrime)(18.1));
+console.log(909331 === (0, exports.nearestPrime)(909332));
+console.log(undefined === (0, exports.nearestPrime)(-20));
+console.log(undefined === (0, exports.nearestPrime)(0));
+console.log(undefined === (0, exports.nearestPrime)(0.2));
+console.log(undefined === (0, exports.nearestPrime)(0.9));
+console.log(2 === (0, exports.nearestPrime)(1));
+console.log(2 === (0, exports.nearestPrime)(1.1));
+console.log(2 === (0, exports.nearestPrime)(1.6));
+console.log(2 === (0, exports.nearestPrime)(2));
+console.log(2 === (0, exports.nearestPrime)(-20, true));
+console.log(2 === (0, exports.nearestPrime)(0, true));
+console.log(2 === (0, exports.nearestPrime)(0.2, true));
+console.log(2 === (0, exports.nearestPrime)(0.9, true));
+console.log(2 === (0, exports.nearestPrime)(1, true));
+console.log(2 === (0, exports.nearestPrime)(1.5, true));
