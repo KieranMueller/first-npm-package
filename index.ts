@@ -1,4 +1,4 @@
-// function that takes a number and returns the closest prime number to it.
+// function that takes a number and returns the closest prime number to it..
 
 const MAX_SAFE_INTEGER = 9007199254740991
 
