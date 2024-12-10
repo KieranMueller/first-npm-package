@@ -33,7 +33,7 @@ to the top of the file
 
 ## In Action
 
-![alt text](assets/nearest-prime-install1.gif)
+![alt text](https://github.com/KieranMueller/nearest-prime/blob/master/assets/nearest-prime-install1.gif?raw=true 'package installation')
 
 ## Fixes & Improvements
 
