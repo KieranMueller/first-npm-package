@@ -33,7 +33,7 @@ to the top of the file
 
 ## In Action
 
-![alt text](assets/nearest-prime-install.gif)
+![alt text](assets/nearest-prime-install1.gif)
 
 ## Fixes & Improvements
 
