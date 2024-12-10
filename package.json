@@ -1,9 +1,8 @@
 {
     "name": "nearest-prime",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "nearestPrime() takes a number and returns the closest prime number",
     "main": "./dist/cjs/index.js",
-    "type": "module",
     "module": "./dist/esm/index.js",
     "types": "./dist/esm/index.d.ts",
     "files": [
@@ -11,8 +10,11 @@
         "README.md"
     ],
     "exports": {
-        "import": "./dist/esm/index.js",
-        "require": "./dist/cjs/index.js"
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./package.json": "./package.json"
     },
     "scripts": {
         "build": "npm run build-common && npm run build-es",
