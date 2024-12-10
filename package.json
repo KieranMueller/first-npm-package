@@ -1,6 +1,6 @@
 {
     "name": "nearest-prime",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "description": "nearestPrime() takes a number and returns the closest prime number",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
@@ -33,7 +33,7 @@
         "utility"
     ],
     "author": "Kieran Mueller",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/KieranMueller/nearest-prime/issues"
     },
