@@ -14,4 +14,5 @@
 ## In Action
 
 ![alt text](assets/images/code.png)
-![alt text](assets/images/console.png)
+![alt text](assets/images/console1.png)
+![alt text](assets/images/console2.png)
