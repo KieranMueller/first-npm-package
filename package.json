@@ -23,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/KieranMueller/nearest-prime-npm.git"
+        "url": "git+https://github.com/KieranMueller/nearest-prime.git"
     },
     "keywords": [
         "closest",
@@ -35,9 +35,9 @@
     "author": "Kieran Mueller",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/KieranMueller/nearest-prime-npm/issues"
+        "url": "https://github.com/KieranMueller/nearest-prime/issues"
     },
-    "homepage": "https://github.com/KieranMueller/nearest-prime-npm#readme",
+    "homepage": "https://github.com/KieranMueller/nearest-prime#readme",
     "devDependencies": {
         "typescript": "^5.7.2"
     }
